@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railways Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="mainMenu" class="screen">
+        <h1 class="game-title">RAILWAYS</h1>
+
+        <div class="input-container">
+            <input type="text" id="playerName" class="name-input" placeholder="WHO ARE YOU?">
+        </div>
+
+        <div class="difficulty-section">
+            <h2 class="difficulty-title">SET THE DIFFICULTY!</h2>
+            <div class="difficulty-buttons">
+                <button id="easyMode" class="difficulty-btn selected">
+                    5 X 5
+                    <span class="difficulty-label">EASY</span>
+                </button>
+                <button id="hardMode" class="difficulty-btn">
+                    7 X 7
+                    <span class="difficulty-label">HARD</span>
+                </button>
+            </div>
+        </div>
+        <div id="messageContainer" class="message-container" style="display: none;">
+            <h2 id="messageText"></h2>
+        </div>
+        <div class="control-buttons">
+            <button id="rulesBtn" class="rules-btn">RULES</button>
+            <button id="startBtn" class="start-btn">START GAME</button>
+        </div>
+    </div>
+    <div id="gameScreen" class="screen" style="display: none;">
+        <div class="game-header">
+            <div class="player-info">
+                <span>Player: </span>
+                <span id="playerNameDisplay"></span>
+            </div>
+            <div class="timer-container">
+                <span>Time: </span>
+                <span id="timer">0.000</span>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="grid-container"></div>
+        </div>
+
+        <div class="game-controls">
+            <button id="menuBtn">Menu</button>
+            <button id="resetBtn">Reset</button>
+            <button id="checkSolutionBtn">Check Solution</button>
+            <button id="saveGameBtn">Save</button>
+            <button id="loadGameBtn">Load</button>
+        </div>
+    </div>
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Game Rules</h2>
+            <div class="rules-text">
+                <p>Help Trickles design the map for the kingdom's railway network!</p>
+                <p>1. Create a continuous circular railway line that reaches every place where the train can travel.</p>
+                <p>2. Different terrain types have different rules:</p>
+                <div class="terrain-examples">
+                </div>
+                <p>3. The railway line cannot cross itself or branch off</p>
+                <p>4. Each cell can only be used once</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
